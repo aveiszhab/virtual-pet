@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose"
   },
-  "author": "",
+  "author": "aveiszha",
   "license": "ISC",
   "devDependencies": {
     "jest": "^25.1.0"
