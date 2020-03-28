@@ -31,6 +31,55 @@ const Pet = require('../src/pet');
 **Create and name your pet**
 
 const pet = new Pet('pickYourPetName');
+Your pet has an 
+ - age (initially 0)
+ - hunger level (initially 0)
+ - fitness level (initially 10)
+
+**Growing up**
+Your pet will have a birthday every time when you call the grow up method:
+
+pet.growUp();
+
+The grow up method will increase the hunger level by 5 and decrease the fitness level by 3.
+
+**Walking**
+
+You can take care of your pet's fitness level by walking it. Every time you call the walk method, the fitness level by 4. The fitness level can't go above 10 regardless how many times you call the method
+
+pet.walk();
+
+**Feeding**
+
+You can feed your pet by calling the feed method, it will decrease the hunger level by 3. The fitness level can't go below 0 regardless how many times you call the method
+
+pet.feed();
+
+**Wellbeing**
+
+You can check your pet's current status with the below command:
+
+console.log(`${pet.checkUp()}`);
+
+Here are the list of messages:
+
+- if the fitness level is less or equal than 3 it will be 'I need a  walk'
+- if the hunger level is more or equal than 5 it will be 'I am hungry'
+- if the fitness level is less or equal than 3 AND the hunger level is more or equal than 5, it will be 'I am hungry AND I need a walk'
+- if the fitness level is more than 3 AND the hunger level is less than 5, it will be 'I feel great!'
+
+You can also see the individual numbers if you lost track:
+
+console.log(`${pet.name}'s age: ${pet.age}`);
+console.log(`${pet.name}'s hunger level: ${pet.hunger}`);
+console.log(`${pet.name}'s fitness level: ${pet.fitness}`);
+
+**Death**
+
+There is one more wellbeing message you need to be very careful about! It sounds like 'Your pet is no longer alive :('. You do not want that. 
+Walk your pet often and do not let the fitness level reach zero or below.
+Feed your pet often and do not let the hunger level to increase 10 or more.
+Unfortunately when your pet reaches 30 years, it will die. Look at the bright side though, real pets very rarely are with us for 30 years :). Also you pet can have babies. See the next paragraph 
 
 
 
