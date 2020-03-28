@@ -1,11 +1,15 @@
 const Pet = require('../src/pet');
 
 const pet = new Pet('Fido');
+const child = new Pet('Amelia');
 
 beforeEach(() => {
   pet.age = 0;
   pet.hunger = 0;
   pet.fitness = 10;
+  child.age = 0;
+  child.hunger = 0;
+  child.fitness = 10;
 })
 
 describe('constructor', () => {
@@ -109,4 +113,15 @@ describe('checks if pet is alive',() => {
     pet.hunger = 9;
     expect(pet.isAlive).toBeTruthy();
   });
+});
+
+describe('child constructor', () => {
+  it('returns an object', () => {
+    expect(new Pet('Amelia')).toBeInstanceOf(Object);
+  });
+  it('returns child array', () => {
+    pet.adoptChild(child);
+    expect(pet.children).toEqual([{"age": 0, "children": [], "fitness": 10, "hunger": 0, "name": "Amelia"}]);
+  });
+ 
 });
