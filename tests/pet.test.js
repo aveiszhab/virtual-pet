@@ -2,6 +2,7 @@ const Pet = require('../src/pet');
 
 const pet = new Pet('Fido');
 const child = new Pet('Amelia');
+const child2 = new Pet('Toto')
 
 beforeEach(() => {
   pet.age = 0;
@@ -101,17 +102,17 @@ describe('check up', () => {
 });
 
 describe('checks if pet is alive',() => {
-  it('if fitness is less than 0, hunger is more than 10 or age is more then 30 the pet is not alive',() => {
+  it('if age is more then 30 the pet is not alive',() => {
     pet.age = 30;
-    pet.fitness = 0;
-    pet.hunger = 10;
     expect(pet.isAlive).toBeFalsy();
   });
-  it('if fitness is more than 0, hunger is less than 10 or age is less then 30 the pet is alive',() => {
-    pet.age = 29;
-    pet.fitness = 1;
-    pet.hunger = 9;
-    expect(pet.isAlive).toBeTruthy();
+  it('if fitness is less than 0, the pet is not alive',() => {
+    pet.fitness = -1;
+    expect(pet.isAlive).toBeFalsy();
+  });
+  it('if hunger is more than 10 the pet is not alive',() => {
+    pet.hunger = 11;
+    expect(pet.isAlive).toBeFalsy();
   });
 });
 
@@ -121,7 +122,9 @@ describe('child constructor', () => {
   });
   it('returns child array', () => {
     pet.adoptChild(child);
-    expect(pet.children).toEqual([{"age": 0, "children": [], "fitness": 10, "hunger": 0, "name": "Amelia"}]);
+    expect(pet.children.length).toEqual(1);
+    pet.adoptChild(child2);
+    expect(pet.children.length).toEqual(2);
   });
  
 });

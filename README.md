@@ -92,6 +92,17 @@ pet.adoptChild(child);
 
 *Now you can use the commands already explained for the child too,only replace pet for child. e.g. to feed the child the command is child.feed();*
 
+To have more children:
+
+const child2 = new Pet('Anna');
+*Before hitting enter, overwrite the name*
+
+pet.adoptChild(child1);
+
+And so on. Babies are cute but you will have more mouth to feed so have them responsibly!
+
+
+
 
 
 ## Versioning

@@ -23,37 +23,37 @@ function Pet(name) {
 Pet.prototype = {
     get isAlive() {
       return this.age < DEADLY_AGE && this.hunger < DEADLY_HUNGER && this.fitness > DEADLY_FITNESS;
-    }
-  };
+    },
+ 
 
 // Getting older / hungrier and unfit
-Pet.prototype.growUp = function () {
+    growUp: function () {
     if (!this.isAlive) {
         throw new Error(`${DEAD_PET}`);
     }
     this.age += 1, 
     this.hunger += 5, 
     this.fitness -= 3; 
-}
+    },
 
 // Some exercise will improve fitness. It has a maximum level though
-Pet.prototype.walk = function() {
+    walk: function() {
     if (!this.isAlive) {
         throw new Error(`${DEAD_PET}`);
     }
     this.fitness + 4 <= 10 ? this.fitness += 4 : this.fitness = MAXIMUM_FITNESS;
-}
+    },
 
 // Some eating will decrease hunger. It has a minimum level though
-Pet.prototype.feed = function() {
+    feed: function() {
     if (!this.isAlive) {
         throw new Error(`${DEAD_PET}`);
     }
     this.hunger - 3 <= 0 ? this.hunger = MINIMUM_HUNGER : this.hunger -= 3; 
-}
+    },
 
 // Keep an eye on the pet
-Pet.prototype.checkUp = function() {
+    checkUp: function() {
     if(this.age >= DEADLY_AGE || this.hunger >= DEADLY_HUNGER || this.fitness <= DEADLY_FITNESS) {
         return `Your pet is no longer alive :(`
     } else if(this.fitness <=WARNING_FITNESS && this.hunger >= WARNING_HUNGER) {
@@ -65,11 +65,12 @@ Pet.prototype.checkUp = function() {
     } else {
         return 'I feel great!'
     }
-}
+    },
 
 //Having a child
-Pet.prototype.adoptChild = function(child) {
-    this.children[0] = child;
+    adoptChild: function(child) {
+    this.children.push(child);
+    }
 }
 
 
