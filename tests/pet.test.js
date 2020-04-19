@@ -114,6 +114,12 @@ describe('checks if pet is alive',() => {
     pet.hunger = 11;
     expect(pet.isAlive).toBeFalsy();
   });
+  it('if levels do not reach deadly, it is alive',() => {
+    pet.age = 29;
+    pet.hunger = 9;
+    pet.fitness = 1;
+    expect(pet.isAlive).toBeTruthy();
+  });
 });
 
 describe('child constructor', () => {
