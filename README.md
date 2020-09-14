@@ -1,7 +1,7 @@
 # Virtual Pet
 Is having a pet is one of your biggest dream but for some rason you can't have one right now? Are you about to have a pet but you would like to have some experience before having one? Have a virtual pet then :)
 
-Let's see what virualpets are capable of. You can name them.They will get older and as they do, they get hungrier and less fit. You can walk your pet to increase it's fitness. You can feed your pet to decrease it's hunger. You can talk to your pet to see if it needs feeding or walking. If your pet gets too hungry or unfit, it will DIE. If your pet gets to 30 days old it will DIE. Take care of your pet and don't let them to die before their time is up.
+Let's see what virual pets are capable of. You can name them.They will get older and as they do, they get hungrier and less fit. You can walk your pet to increase it's fitness. You can feed your pet to decrease it's hunger. You can talk to your pet to see if it needs feeding or walking. If your pet gets too hungry or unfit, it will DIE. If your pet gets 30 years old it will DIE. Take care of your pet and don't let them to die before their time is up.
 
 ## Getting Started
 
@@ -101,14 +101,6 @@ pet.adoptChild(child1);
 
 And so on. Babies are cute but you will have more mouth to feed so have them responsibly!
 
-
-
-
-
-## Versioning
-
-This is version1
-
 ## Authors
 
-aveiszhab
+Aniko Veiszhab
